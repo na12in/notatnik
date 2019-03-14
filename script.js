@@ -40,6 +40,7 @@ document.getElementById("writeTitle").value = "";
 
 })
 
+
 function remove(){
     var note = document.getElementById("firstNote"); 
     note.remove("firstNote");
@@ -57,7 +58,7 @@ add.addEventListener("click", function(){
     var strong = listNote.firstElementChild;
     var note = document.createElement("div");    ///tworzenie diva
     
-    note.innerHTML = '<div class="firstNote" id="firstNote"> <header class="headerlist"><nav class="navlist"><div class="titleDiv" id="titleDiv"></div><div class="dateNote" id="dateNote"></div><button type="button" class="edit"><i class="material-icons" style="color:white">edit</i></button><button type="button" class="delete" onclick="remove()"><i class="material-icons" style="color:white;font-size:40px">close</i></button></nav></header><div class="notearea" id="notearea"></div></div>';
+    note.innerHTML = '<div class="firstNote" id="firstNote"> <header class="headerlist"><nav class="navlist"><div class="titleDiv" id="titleDiv"></div><div class="dateNote" id="dateNote"></div><button type="button" class="edit"><i class="material-icons" style="color:white">edit</i></button><button type="button" class="delete" id = "delete" onclick="remove()"><i class="material-icons" style="color:white;font-size:40px">close</i></button></nav></header><div class="notearea" id="notearea"></div></div>';
   // listNote.appendChild(note);
 
    listNote.insertBefore(note, strong); //wstawianie przed
