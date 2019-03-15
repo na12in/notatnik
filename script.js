@@ -86,7 +86,7 @@ var year = dt.getFullYear();
 var hour = dt.getHours();
 var minutes = dt.getMinutes();
 
-document.getElementById("dateNote").innerHTML =  hour +':' + minutes  +"  "+ month + '-' + day + '-' + year;
+document.getElementById("dateNote").innerHTML =  hour +':' + minutes  +"   "+ month + '-' + day + '-' + year;
 
 
   
