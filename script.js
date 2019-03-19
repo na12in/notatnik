@@ -1,36 +1,3 @@
-//function submit(){
-   // var wroteText = document.getElementById("writeArea").value;
-    //document.getElementById("notearea").innerHTML= wroteText;
-   
-//}
-
-
-
-
-//var titleWrite = document.getElementById("writeTitle").value;
-//function autoWriteTitle(){
-//if(!document.getElementById("writeTitle").value.trim()){
-//while(titleWrite===""){
-    //console.log("title");
-//if(titleWrite.value.length<=0){
-   // var typed= document.getElementById("writeArea").value;
-   //document.getElementById("writeTitle").value= typed;
-    
-//}}
-//}
-
-
-
-/*function autoWriteTitle() {
-    const typed = document.querySelector("#writeArea");
-    if(!typed.value.length==0){
-        const input = document.querySelector("#writeTitle");
-        if (input.value.length==0) {
-            document.querySelector("#writeTitle").value = typed.value;
-       }}}*/
-
-
-
 
 
 var clear =document.getElementById("clearButton");
@@ -40,35 +7,32 @@ document.getElementById("writeTitle").value = "";
 
 })
 
-
 function remove(){
-    var note = document.getElementById("firstNote"); 
-    note.remove("firstNote");
+    var note = document.getElementById("note"); 
+    note.remove("note");
 }
 
-var add = document.querySelector(".submitButton");
+var add = document.getElementById("submitButton");
 
 add.addEventListener("click", function(){
     
-    var areaWrite = document.querySelector("#writeArea").value;
+    var areaWrite = document.getElementById("writeArea").value;
     if(!(areaWrite.length==0)){  //jesli pole do wpisywania notki nie jest puste
     
-
     var listNote = document.getElementById("list"); 
     var strong = listNote.firstElementChild;
     var note = document.createElement("div");    ///tworzenie diva
     
-    note.innerHTML = '<div class="firstNote" id="firstNote"> <header class="headerlist"><nav class="navlist"><div class="titleDiv" id="titleDiv"></div><div class="dateNote" id="dateNote"></div><button type="button" class="edit"><i class="material-icons" style="color:white">edit</i></button><button type="button" class="delete" id = "delete" onclick="remove()"><i class="material-icons" style="color:white;font-size:40px">close</i></button></nav></header><div class="notearea" id="notearea"></div></div>';
+    note.innerHTML = '<div class="note" id="note"> <header class="note_header"><nav class="note_nav"><div class="titleDiv" id="titleDiv"></div><div class="dateNote" id="dateNote"></div><button type="button" class="edit"><i class="material-icons" style="color:white">edit</i></button><button type="button" class="delete" id = "delete" onclick="remove()"><i class="material-icons" style="color:white;font-size:40px">close</i></button></nav></header><div class="noteArea" id="noteArea"></div></div>';
   // listNote.appendChild(note);
 
    listNote.insertBefore(note, strong); //wstawianie przed
    
   var wroteNote = document.getElementById("writeArea").value; 
-  document.getElementById("notearea").innerHTML= wroteNote; //wpisanie tekstu z pola area do diva
+  document.getElementById("noteArea").innerHTML= wroteNote; //wpisanie tekstu z pola area do diva
 
   var wroteTitle = document.getElementById("writeTitle").value;
   if (wroteTitle.length==0){
-      console.log("elo");
     document.getElementById("titleDiv").innerHTML=wroteNote;
     var max=7;
     if(wroteNote.length>max){
@@ -88,21 +52,15 @@ var minutes = dt.getMinutes();
 
 document.getElementById("dateNote").innerHTML =  hour +':' + minutes  +"   "+ month + '-' + day + '-' + year;
 
-
-  
-
-  document.getElementById('writeArea').value = ""; //puste pole do area
-  document.getElementById("writeTitle").value = ""; //puste pole do inputa
-
+document.getElementById('writeArea').value = ""; //puste pole do area
+document.getElementById("writeTitle").value = ""; //puste pole do inputa
 }
-  
     
 }, false)
 
 var liczba = document.getElementById("writeArea");
 liczba.addEventListener("keydown", function() {
     
-   
     console.log(liczba.value.length);
     var max= 6;
 

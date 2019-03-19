@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    }
+}
 
 body{ 
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #4b597c;
 }
-
 
 .mainHeader{
     width: 100%;
@@ -20,35 +19,31 @@ body{
 
 .mainHeader_img{
     height: 90%;
-   
-   right: 50%;
+    right: 50%;
     top: 10%;
-    
     position: absolute;
-    }
-
-.placeWrite{
-    background-color: #324065;
-    height: 20%;  
-    position: relative;
 }
 
+.writePart{
+    background-color: #324065;
+    height: 25%;  
+    position: relative;
+    }
 
-
-
-.writeNote{
+.writePart_form{
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(8, 1fr);
     grid-auto-flow: column;
     grid-gap: 0px;
-    height: 70%;
-    top: 10%;
+    height: 80%;
+    top: 5%;
     left: 5%;
     position: absolute;
-    width: 40%}
+    width: 40%
+    }
 
-.writeTitle{
+.writePart_input--title{
     grid-row: span 1;
     grid-column: span 7;
     background-color: transparent;
@@ -63,14 +58,12 @@ body{
     width: 100%;
     }
 
-
-.writeTitle:focus{
+.writePart_input--title:focus{
     background-color: #2f3b5c;
     transition: 0.5s;
-        }
+    }
 
-
-.writeArea{
+.writePart_textarea--note{
     background-color: transparent;
     border-width: 2px;
     border-color: #00a9ac;
@@ -84,319 +77,67 @@ body{
     height: 100%;
     grid-row: span 3;
     grid-column: span 7;
-}
-.writeArea:focus{ background-color: #2f3b5c;
-transition: 0.5s;}
+    }
 
-.submitButton{
-    
+.writePart_textarea--note:focus{ 
+    background-color: #2f3b5c;
+    transition: 0.5s;
+    }
+
+label{
+    visibility: hidden;
+    grid-row: span 1;
+    grid-column: span 7;  
+}
+
+.writePart_button{
     width: 100%;
     cursor: pointer;
-    border-width: 4px;
-    border-color: transparent;
-    border-style: solid;
-    
+    border: none;
     background-color:  transparent;
-    grid-row: span 2;
-    grid-column: span 1;
-     
+    grid-row: span 3;
+    grid-column: span 1; 
 }
 
-.clearButton{
-    width: 100%;
-    cursor: pointer;
-    border-width: 4px;
-    border-color: transparent;
-    border-style: solid;
-    background-color:  transparent;
-    grid-row: span 2;
-    grid-column: span 1;
-}
-
-.clearButton:hover{
+.writePart_button:hover{
     background-color:#4b597c; 
 }
 
-.submitButton:hover{
-    background-color:#4b597c; 
-}
-
-.divwrite{
-min-width: 90%;
-
-}
-.listpart{
+.listPart{
     overflow-y: scroll;
-    height: 68%;
-    
-}
-.list{
-  display: flex;
-  left: 5%;
-  top: 40%;
-  width:45%;
-  flex-direction:column;
-
+    height: 63%;  
 }
 
-.firstNote{
-    background-color: #e42d47;
-    height: 20%;
-    min-width: 100%;
-    display: block;
-
-
-}
-  
-.headerlist{
-    width: 100%;
-   
-    background-color:#f74668;
-    height: 35%;
- 
-}
-
-.navlist{
+.listPart_div{
     display: flex;
-    width: 100%;
-   height: 100%;
-    top: 0;
-}
-
-.list div{
-    margin: 5px;   
-}
-
-.titlediv{
-    flex: 50%;
-}
-
-
-
-.delete{
-    border: none;
-    background-color: transparent;
-    flex: 5%;
-    cursor: pointer;
-
-}
-.delete:hover{
-    background-color: #e42d47;
-}
-    
-.edit{
-    border: none;
-    background-color: transparent;
-    flex: 6%;
-    cursor: pointer;
-}
-
-.edit:hover{
-    background-color: #e42d47;
-}
-
-
-
-/*span{
-    opacity: 0;
-    position: absolute;
-}
-.submitnote:hover span{
-    display: inline;
-    position: absolute;
-	margin: 15px;
-    background: #fff1bb;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #000000;
-	-moz-opacity: 0.8;
-	opacity:.80;
-	font-weight: normal;
-    text-align: center;
-    padding: 5px;
-   
-    
-}* {
-    margin: 0;
-    padding: 0;
-    }
-
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #4b597c;
-    position: relative;
-   
-}
-
-.cale{
-    position: fixed;
-    background-color: rgb(56, 55, 55);
-    height: 100px;
-    width: 100%;
-    z-index: 99999;
-}
-.mainHeader{
-   
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #16203b;
-    text-align: center;
-    
-    font-size: 0;
-}
-
-
-.placeWrite{
-    background-color: #324065;
-    height: 150px;
-   
-    z-index: 99999;
-   
-}
-
- .apostroph{
-    color: #e42d47;
-  font-family: Arial, Helvetica, sans-serif;
-   font-size: 60px;
-   margin: 0;
-   padding: 0;
-   font-weight: bold;
-  
-
-}
-
- .titleNote{
-    color:#00A9AC;
-    font-size: 50px;
-    font-weight:540;
-}
-
-
-.writeNote{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-flow: column;
-    position: fixed;
-    top: 13%;
     left: 5%;
-    width: 45%;
-    height: 20%;
-    grid-gap: 0px;}
-
-    .writeTitle{
-        grid-row: span 1;
-grid-column: span 7;
-background-color: transparent;
-border-width: 4px;
-    border-color: #4b597c;
-    border-style: solid;
-border-radius: none;
-color: white;
-width: 100%;
-    }
-
-.writeArea{
-background-color: transparent;
-border-width: 4px;
-    border-color: #4b597c;
-    
-    border-style: solid;
-border-radius: none;
-color: white;
-width: 100%;
-height: 100%;
-grid-row: span 3;
-grid-column: span 7;
+    top: 40%;
+    width:45%;
+    flex-direction:column;
 }
 
-
-.submitButton{
-    
-    width: 100%;
-    cursor: pointer;
-    border-width: 4px;
-    border-color: #4b597c;
-    border-style: solid;
-    background-color:  transparent;
-    grid-row: span 2;
-grid-column: span 1;
-    
-  
-}
-
-.clearButton{
-    width: 100%;
-    cursor: pointer;
-    border-width: 4px;
-    border-color: #4b597c;
-    border-style: solid;
-    background-color:  transparent;
-    grid-row: span 2;
-grid-column: span 1;
-}
-
-.clearButton:hover{
-    background-color:#4b597c; 
-}
-
-.submitButton:hover{
-    background-color:#4b597c; 
-}
-
-
-
-.divwrite{
-min-width: 90%;
-
-}
-
-.list{
-  display: flex;
-  overflow: hidden;
-  left: 5%;
-  top: 40%;
-  width:45%;
-  flex-direction:column;
-  height: 100%;
-  position: absolute;
-z-index: 0;
- 
- 
-}
-
-.firstNote{
+.note{
     background-color: #e42d47;
     height: 20%;
     min-width: 100%;
     display: block;
-
-
+   
 }
-
-
   
-
-.headerlist{
+.note_header{
     width: 100%;
-    position: relative;
     background-color:#f74668;
     height: 35%;
- 
 }
 
-.navlist{
+.note_nav{
     display: flex;
     width: 100%;
-   height: 100%;
-   position: absolute;
+    height: 100%;
     top: 0;
 }
 
-.list div{
+.listPart_div div{
     margin: 5px;   
 }
 
@@ -404,21 +145,17 @@ z-index: 0;
     flex: 50%;
 }
 
-
-
 .delete{
     border: none;
     background-color: transparent;
     flex: 5%;
     cursor: pointer;
-
 }
+
 .delete:hover{
     background-color: #e42d47;
 }
     
-
-
 .edit{
     border: none;
     background-color: transparent;
@@ -431,32 +168,4 @@ z-index: 0;
 }
 
 
-.writenote div{
-    
-}
 
-
-.notearea{
-    
-}
-
-/*span{
-    opacity: 0;
-    position: absolute;
-}
-.submitnote:hover span{
-    display: inline;
-    position: absolute;
-	margin: 15px;
-    background: #fff1bb;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #000000;
-	-moz-opacity: 0.8;
-	opacity:.80;
-	font-weight: normal;
-    text-align: center;
-    padding: 5px;
-   
-    
-}
