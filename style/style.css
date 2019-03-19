@@ -28,7 +28,7 @@ body{
     background-color: #324065;
     height: 25%;  
     position: relative;
-    }
+}
 
 .writePart_form{
     display: grid;
@@ -41,7 +41,7 @@ body{
     left: 5%;
     position: absolute;
     width: 40%
-    }
+}
 
 .writePart_input--title{
     grid-row: span 1;
@@ -53,7 +53,6 @@ body{
     border-right: none;
     border-top: none;
     border-left: none;
-    border-radius: none;
     color: white;
     width: 100%;
     }
@@ -61,14 +60,13 @@ body{
 .writePart_input--title:focus{
     background-color: #2f3b5c;
     transition: 0.5s;
-    }
+}
 
 .writePart_textarea--note{
     background-color: transparent;
     border-width: 2px;
     border-color: #00a9ac;
     border-style: solid;
-    border-radius: none;
     border-right: none;
     border-top: none;
     border-left: none;
@@ -77,12 +75,12 @@ body{
     height: 100%;
     grid-row: span 3;
     grid-column: span 7;
-    }
+}
 
 .writePart_textarea--note:focus{ 
     background-color: #2f3b5c;
     transition: 0.5s;
-    }
+}
 
 label{
     visibility: hidden;
@@ -108,7 +106,7 @@ label{
     height: 63%;  
 }
 
-.listPart_div{
+.listPart_elements{
     display: flex;
     left: 5%;
     top: 40%;
@@ -121,13 +119,12 @@ label{
     height: 20%;
     min-width: 100%;
     display: block;
-   
 }
   
 .note_header{
     width: 100%;
     background-color:#f74668;
-    height: 35%;
+    height: 40%;
 }
 
 .note_nav{
@@ -137,33 +134,29 @@ label{
     top: 0;
 }
 
-.listPart_div div{
+.listPart_elements div{
     margin: 5px;   
 }
 
-.titlediv{
+.note_title{
     flex: 50%;
 }
 
-.delete{
-    border: none;
-    background-color: transparent;
+.nav_button--edit{
+    flex: 6%; 
+}
+
+.nav_button--delete{
     flex: 5%;
-    cursor: pointer;
 }
 
-.delete:hover{
-    background-color: #e42d47;
-}
-    
-.edit{
+.nav_button{
     border: none;
     background-color: transparent;
-    flex: 6%;
     cursor: pointer;
 }
 
-.edit:hover{
+.nav_button:hover{
     background-color: #e42d47;
 }
 

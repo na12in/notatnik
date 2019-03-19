@@ -20,9 +20,9 @@
 
     <section class="writePart">   
             <form class="writePart_form">
-                <label for="note-title">Tytuł</label>
+                <label for="note-title" class="writePart_label--title">Tytuł</label>
                 <input type="text" class="writePart_input--title" id="writeTitle" placeholder="Title">
-                <label for="note-content">Notatka</label>
+                <label for="note-content" class="writePart_label--note">Notatka</label>
                 <textarea name="write" class="writePart_textarea--note" id="writeArea" placeholder="Note" required></textarea>
                 <button type="button" class="writePart_button writePart_button--save" id="submitButton" ><i class="fas fa-check fa-2x" style="color:rgb(233, 229, 229)"></i>
                 <button type="reset" class="writePart_button writePart_button--clear" id="clearButton"><i class="material-icons" style="color:white;font-size:40px"> close</i></button>
@@ -30,8 +30,9 @@
    
     </section>
     <section class="listPart">
-         <div class="listPart_div" id="list"></div>
+         <div class="listPart_elements" id="list"></div>
     </section>
+
     <script src="script.js"></script>   
 </body>
 
