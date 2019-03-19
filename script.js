@@ -16,6 +16,8 @@ var add = document.getElementById("submitButton");
 
 add.addEventListener("click", function(){
     
+
+    
     var areaWrite = document.getElementById("writeArea").value;
     if(!(areaWrite.length==0)){  //jesli pole do wpisywania notki nie jest puste
     
