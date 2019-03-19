@@ -58,11 +58,7 @@ document.getElementById("writeTitle").value = ""; //puste pole do inputa
     
 }, false)
 
-var liczba = document.getElementById("writeArea");
-liczba.addEventListener("keydown", function() {
-    
-    console.log(liczba.value.length);
-    var max= 6;
+
 
 
 })
